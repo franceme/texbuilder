@@ -1,0 +1,8 @@
+.github/
+BaseScripts/
+Extras/
+.gitattributes
+.gitignore
+Dockerfile
+Makefile
+README.md

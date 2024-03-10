@@ -1,0 +1,13 @@
+alias update='apt-get update;apt update;apt-get upgrade -y;apt upgrade -y;apt dist-upgrade -y;apt full-upgrade -y;apt autoremove -y;refresh'
+alias pyup='pip3 install --upgrade pip;pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U;'
+alias mitoup='pip3 install mitoinstaller --upgrade;python3 -m mitoinstaller upgrade;'
+alias refresh='~/.bashrc'
+alias refresh='source ~/.bashrc'
+alias attach='tmux a -t'
+alias vo='invoke'
+alias show='tmux list-sessions'
+alias new='tmux new -s '
+alias list='tmux list-sessions'
+alias lab='jupyter lab --ip 0.0.0.0 --allow-root'
+alias sync='git add .;git commit -m "Update";git push'
+export GIT_DISCOVERY_ACROSS_FILESYSTEM=1

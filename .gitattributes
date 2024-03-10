@@ -1,0 +1,6 @@
+Dockerfile eol=lf
+Makefile eol=lf
+*.py eol=lf
+.bash_aliases eol=lf
+.gitattributes eol=lf
+.gitignore eol=lf
