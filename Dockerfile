@@ -18,5 +18,14 @@ ENV PATH="/usr/local/texlive/2020/bin/armhf-linux:$PATH"
 RUN tlmgr update --self --all --reinstall-forcibly-removed \
   && luaotfload-tool -v -vvv -u
 
+#Extra Stuffs
+RUN apt-get update \ 
+  && apt-get install -y neovim tmux curl wget \
+  && curl -fsSL https://code-server.dev/install.sh | bash \
+  && echo "alias attach='tmux a -t'" >> /root/.bashrc \
+  && echo "alias list='tmux list-sessions'" >> /root/.bashrc \
+  && echo "alias new='tmux new -s'" >> /root/.bashrc \
+  && echo "code-server --auth none --disable-telemetry --disable-update-check --bind-addr 0.0.0.0:8912 --user-data-dir `pwd`" >> /bin/vs
+
 WORKDIR /sync/
 CMD ["bash"]
