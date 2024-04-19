@@ -25,7 +25,7 @@ RUN apt-get update \
   && echo "alias attach='tmux a -t'" >> /root/.bashrc \
   && echo "alias list='tmux list-sessions'" >> /root/.bashrc \
   && echo "alias new='tmux new -s'" >> /root/.bashrc \
-  && echo "code-server --auth none --disable-telemetry --disable-update-check --bind-addr 0.0.0.0:8912 --user-data-dir `pwd`" >> /bin/vs
+  && echo "code-server --auth none --disable-telemetry --disable-update-check --bind-addr 0.0.0.0:8912 --user-data-dir `pwd`" >> /bin/vs && chmod 777 /bin/vs 
 
 WORKDIR /sync/
 CMD ["bash"]
